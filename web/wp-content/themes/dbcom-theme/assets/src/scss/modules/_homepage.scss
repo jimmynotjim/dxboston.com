@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    $HOMEPAGE
+\*------------------------------------*/
+.home-intro {
+  @include media(max-width $palm-end) {
+    h2 {
+      font-size: 30px
+    }
+  }
+}
+
+.home-article {
+  background-color: #fff;
+}
+
+.home-intro,
+.home-content {
+
+  p {
+    color: $color-secondary;
+    font-size: em($size-epsilon, $base-font-size);
+    line-height: 30px / $size-delta;
+
+    @include media($desk-start) {
+      font-size: em($size-delta, $base-font-size);
+    }
+  }
+}
+
+.home-grid {
+  @extend .unstyled-list;
+}
+
+.home-grid__item {
+  background-color: $color-primary;
+  background-repeat: no-repeat;
+  background-size: 430px;
+  color: #fff;
+  padding: 30px;
+
+  &.alt-layout {
+    .heading {
+      text-align: center;
+
+      @include media($desk-start) {
+        font-size: 54px;
+      }
+    }
+
+    .btn {
+      background-color: $color-tertiary-tinted;
+    }
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .sub-heading {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .btn {
+    background-color: $color-secondary;
+    text-transform: none;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "DxBoston.com",
+  "shortName": "dbcom",
+  "author": {
+    "name": "DxBoston",
+    "url": "DxBoston.com"
+  },
+  "description": "Event site for DxBoston 2014",
+  "version": "0.1.0",
+  "dependencies": {
+    "genesis-wordpress": "~0.2.50",
+    "bourbon": "~4.0.1",
+    "neat": "~1.6.0",
+    "sharrre": "~1.3.5"
+  }
+}

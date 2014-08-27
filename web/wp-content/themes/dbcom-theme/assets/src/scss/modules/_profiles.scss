@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    $PROFILES - VISUAL
+\*------------------------------------*/
+.post-article--speaker {
+  border-bottom: 5px solid $color-border;
+  padding-bottom: 40px;
+}
+
+.post-title--profile {
+  font-size: em($size-kilo, $base-font-size);
+
+  @include media($desk-start) {
+    font-size: em($size-alpha, $base-font-size);
+  }
+}
+
+.profile-org-role {
+  font-size: em($size-delta, $base-font-size);
+  font-style: italic;
+
+  @include media($desk-start) {
+    font-size: em(32px, $base-font-size);
+  }
+}
+
+.speaker-sessions__heading {
+  color: $color-secondary;
+  font-size: 30px;
+}
+
+.speaker-sessions__list {
+  @extend .cf;
+  @extend .unstyled-list;
+
+  a {
+    color: $color-primary;
+  }
+
+  h3 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 1;
+  }
+}
+
+.profile-connections {
+  @extend .unstyled-list;
+
+  font-size: em($size-epsilon, $base-font-size);
+}
+
+.connection {
+  margin-bottom: $half-spacing-unit;
+
+  a {
+    color: $color-secondary;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .btn--social {
+    display: inline-block;
+  }
+}
+
+.speaker-pagination {
+
+  a {
+    color: $color-secondary;
+    font-size: pxtoem($size-delta, $base-font-size);
+
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
+
+  h3 {
+    @include media(max-width $palm-end) {
+      font-size: 18px;
+    }
+  }
+}

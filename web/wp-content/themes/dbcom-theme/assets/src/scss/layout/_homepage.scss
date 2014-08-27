@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    $HOMEPAGE
+\*------------------------------------*/
+.home-section {
+  @extend .cf;
+
+  clear: both;
+}
+
+.home-article {
+  @extend .cf;
+
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-intro {
+  @include media($desk-start) {
+    @include span-columns(8);
+  }
+}
+
+.home-buttons {
+  @include media(max-width $lap-end) {
+    margin-bottom: $base-spacing-unit * 2;
+  }
+
+  @include media($desk-start) {
+    @include span-columns(4);
+    @include omega;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+}
+
+.home-follow {
+  @extend .cf;
+
+  clear: both;
+
+  border-bottom: 6px solid $color-border;
+  margin-bottom: 40px;
+  padding-bottom: 50px;
+
+  .email-signup--home {
+    @extend .cf;
+
+    @include media(max-width $lap-end) {
+      margin-bottom: $base-spacing-unit;
+    }
+
+    @include media($desk-start) {
+      @include span-columns(9);
+    }
+  }
+
+  .social {
+    @include media($desk-start) {
+      @include span-columns(3);
+      @include omega;
+
+      margin-top: 34px;
+    }
+  }
+}
+
+.home-grid {
+  @extend .cf;
+
+  @include media(max-width $lap-end) {
+    margin-left: 15px;
+  }
+
+  @include media($desk-start) {
+    max-width: 880px;
+    margin: 0 auto 40px;
+  }
+}
+
+.home-grid__item {
+  @include media($lap-start) {
+    @include span-columns(6);
+
+    &:nth-child(even) {
+      @include omega;
+    }
+
+      &:nth-child(odd) {
+      clear: both;
+    }
+  }
+
+  margin-bottom: 15px;
+  height: 350px;
+  position: relative;
+
+  .heading {
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+  }
+}

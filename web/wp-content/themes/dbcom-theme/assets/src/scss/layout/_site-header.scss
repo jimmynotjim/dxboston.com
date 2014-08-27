@@ -1,0 +1,193 @@
+/*------------------------------------*\
+    $SITE HEADER
+\*------------------------------------*/
+.main-nav {
+  height: 60px;
+  margin-bottom: 20px;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+
+  @include media($lap-start) {
+    margin-bottom: 25px;
+  }
+
+  @include media($desk-start) {
+    height: 80px;
+    margin-bottom: 35px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  li {
+    height: 60px;
+
+    @include media($desk-start) {
+      height: 80px;
+    }
+  }
+
+  .search {
+    display: block;
+    width: 65px;
+    text-indent: 100%;
+
+    @include media($desk-start) {
+      width: 90px;
+    }
+  }
+
+  .register {
+    width: 90px;
+
+    @include media($desk-start) {
+      width: 160px;
+    }
+  }
+
+  a {
+    display: block;
+    height: 100%;
+
+    &.nav-toggle {
+      float: right;
+      height: 45px;
+      margin-top: 7px;
+      margin-right: 7px;
+      width: 100px;
+
+      @include media($desk-start) {
+        display: none;
+      }
+    }
+  }
+}
+
+.secondary-menu {
+  float: left;
+}
+
+.primary-menu {
+  float: right;
+
+  @include media($desk-start) {
+    .sub-menu {
+      min-width: 250px;
+    }
+
+    > li:last-child .sub-menu {
+      right: 0;
+    }
+  }
+
+  @include media(max-width $lap-end) {
+    position: absolute;
+    right: -175px;
+    top: 60px;
+    width: 175px;
+    z-index: 10;
+    @include transition-duration(0.4s);
+
+    &.is-open-first {
+      @include transform( translateX(-175px) );
+    }
+
+    &.is-open-second {
+      @include transform( translateX(-375px) );
+    }
+
+    li {
+      height: auto;
+      float: none;
+      position: initial;
+      width: 100%;
+
+      &:hover .sub-menu {
+        height: 0;
+      }
+
+      &.is-active .sub-menu {
+        height: auto;
+      }
+    }
+
+    .sub-menu {
+      right: -200px;
+      top: 0;
+      width: 200px;
+    }
+  }
+}
+
+.menu-item-3073 a,
+.menu-item-3074 a,
+.menu-item-3071 a,
+.menu-item-3072 a {
+  padding-left: $base-spacing-unit * 2;
+}
+
+.icon {
+  @include hide-text;
+}
+
+.site-sub-header {
+  min-height: 80px;
+  padding-top: 30px;
+  position: relative;
+
+  .home & {
+    min-height: 320px;
+  }
+
+  @include media($lap-start) {
+    min-height: 100px;
+    padding-left: 65px;
+    padding-top: 30px;
+  }
+
+  @include media($desk-start) {
+    min-height: 185px;
+    padding-left: 120px;
+    padding-top: 80px;
+
+    .home & {
+      min-height: 500px;
+    }
+  }
+}
+
+.site-logo {
+  background-size: 60px;
+  display: block;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  width: 60px;
+  z-index: 1;
+
+  @include media($lap-start) {
+    background-size: 90px;
+    height: 155px;
+    width: 90px;
+  }
+
+  @include media($desk-start) {
+    background-size: 160px;
+    height: 260px;
+    width: 160px;
+  }
+}
+
+.section-heading {
+  margin-bottom: 15px;
+  margin-left: 80px;
+
+  @include media($lap-start) {
+    margin-left: 100px;
+  }
+
+  @include media($desk-start) {
+    margin-left: 210px;
+    margin-bottom: 25px;
+  }
+}

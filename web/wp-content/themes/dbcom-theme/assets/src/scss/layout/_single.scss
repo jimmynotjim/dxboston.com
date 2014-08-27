@@ -1,0 +1,254 @@
+/*------------------------------------*\
+    $SINGLE POSTS - LAYOUT
+\*------------------------------------*/
+.post-header,
+.page-header {
+  margin-bottom: $base-spacing-unit;
+  position: relative;
+}
+
+.post-header.year-2014 {
+  padding-top: 25px;
+
+  @include media($lap-start) {
+    padding-top: 45px;
+  }
+
+  @include media($desk-start) {
+    @include span-columns(8);
+
+    padding-top: 55px;
+  }
+}
+
+.session-top {
+  @extend .cf;
+
+  @include media($desk-start) {
+    margin-right: -10%;
+  }
+}
+
+.session-details {
+  @include media($desk-start) {
+    @include span-columns(4);
+    @include omega;
+  }
+
+  color: $color-primary;
+  margin-bottom: 40px;
+  max-width: 320px;
+
+  .session-location {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .session-date {
+    clear: both;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+}
+
+.session-icons {
+  @extend .cf;
+  @extend .unstyled-list;
+
+  max-width: 200px;
+}
+
+.session-icon {
+  @include span-columns(2 of 4);
+  @include hide-text;
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 120px;
+
+  &:nth-child(even) {
+    @include omega;
+  }
+}
+
+.post-type {
+  display: inline-block;
+  left: 0;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+}
+
+.post-title,
+.page-title {
+  margin-bottom: 0;
+
+  .has-image & {
+    margin-top: -30px;
+    padding-right: $half-spacing-unit;
+    padding-top: $half-spacing-unit;
+    position: relative;
+    width: percentage(170px / 270px);
+
+    @include media($lap-start) {
+      margin-top: -50px;
+    }
+
+    @include media($desk-start) {
+      margin-top: -80px;
+      padding-right: $base-spacing-unit;
+      padding-top: $base-spacing-unit;
+      width: percentage(520px / 880px);
+    }
+  }
+}
+
+.post-hero {
+  margin-bottom: 0;
+}
+
+.post-hero__image {
+  margin-bottom: 0;
+}
+
+.post-hero__caption {
+  margin-top: $base-spacing-unit;
+  position: absolute;
+  right: 0;
+  width: percentage(80px / 270px);
+
+  @include media($desk-start) {
+    width: percentage(340px / 880px);
+  }
+}
+
+.post-intro {
+  @include media(max-width $palm-end) {
+    clear: both;
+  }
+}
+
+.social-share {
+  float: right;
+  margin-bottom: 10px;
+  margin-left: 10px;
+
+  ul {
+    margin-bottom: 10px;
+  }
+}
+
+.post-rule {
+  height: 5px;
+  margin-bottom: $base-spacing-unit * 2;
+  width: 160px;
+
+  @include media($lap-start) {
+    margin-left: percentage(80px / 650px);
+    width: 250px;
+  }
+
+  @include media($desk-start) {
+    margin-left: percentage(90px / 880px);
+  }
+}
+
+.author-details {
+  @extend .cf;
+
+  margin-bottom: $base-spacing-unit * 2;
+
+  @include media($lap-start) {
+    margin-left: percentage(80px / 650px);
+    width: percentage(480px / 650px);
+  }
+
+  @include media($desk-start) {
+    margin-left: percentage(90px / 880px);
+    width: percentage(610px / 880px);
+  }
+
+  .author-image {
+    margin-bottom: $base-spacing-unit;
+    margin-right: $base-spacing-unit;
+    max-width: 160px;
+
+    @include media($lap-start) {
+      float: left;
+    }
+  }
+
+  .author-byline p {
+    margin-bottom: $half-spacing-unit;
+  }
+
+  .author-name {
+    display: block;
+  }
+}
+
+.post-pagination {
+  @extend .cf;
+
+  margin-bottom: $base-spacing-unit * 2;
+
+  strong {
+    display: block;
+  }
+
+  .prev,
+  .next,
+  .home {
+
+    a {
+      display: block;
+      height: 80px;
+    }
+  }
+
+  .home {
+
+    a {
+      width: 35px;
+      margin: 0 auto;
+    }
+  }
+
+  @include media($lap-start) {
+    margin-left: percentage(80px / 650px);
+
+    div {
+      float: left;
+    }
+
+    .prev,
+    .next {
+      min-height: 1px;
+      width: 40%;
+    }
+
+    .home {
+      width: 20%;
+    }
+  }
+
+  @include media($desk-start) {
+    margin-left: percentage(40px / 880px);
+    margin-right: percentage(40px / 880px);
+  }
+}
+
+#disqus_thread {
+  @include media($lap-start) {
+    margin-left: percentage(80px / 650px);
+    width: percentage(570px / 650px);
+  }
+
+  @include media($desk-start) {
+    margin-left: percentage(90px / 880px);
+    padding-right: 135px;
+  }
+}

@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    $PROFILES - LAYOUT
+\*------------------------------------*/
+.profile-top {
+  @extend .cf;
+}
+
+.post-header--profile {
+  @include media($lap-start) {
+    @include span-columns(8);
+  }
+}
+
+.post-title--profile {
+  margin-top: -30px;
+  padding-right: $half-spacing-unit;
+  padding-top: $half-spacing-unit;
+  position: relative;
+  width: 70%;
+
+  @include media($lap-start) {
+    margin-top: -56px;
+    width: 50%;
+  }
+
+  @include media($desk-start) {
+    margin-top: -87px;
+    padding-right: $base-spacing-unit;
+    padding-top: $base-spacing-unit;
+  }
+}
+
+.profile-image {
+  margin-bottom: 0;
+}
+
+.profile-image--full {
+  @include media($lap-start) {
+    max-width: 520px;
+    width: 100%;
+  }
+}
+
+.profile-org-role {
+  margin-bottom: $base-spacing-unit;
+}
+
+
+.speaker-sessions {
+  @include media($lap-start) {
+    @include span-columns(4);
+  }
+}
+
+.connection {
+  margin-bottom: $half-spacing-unit;
+}
+
+.speaker-pagination {
+  @extend .cf;
+
+  h2 {
+    @include shift(2);
+  }
+
+  div {
+    @include span-columns(4 of 12);
+
+    &:first-of-type {
+      @include shift(2);
+    }
+  }
+}

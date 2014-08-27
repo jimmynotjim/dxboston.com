@@ -1,0 +1,156 @@
+/*------------------------------------*\
+    $SETTINGS
+\*------------------------------------*/
+/**
+ * Set up project-specific variables here which are then used throughout your
+ * build. These variables are automatically picked up by inuit.css so you should
+ * never need to modify any framework code.
+ */
+
+
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+$debug-mode:  false!default;
+
+
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+$global-border-box: true!default;
+
+
+/**
+ * Would you like to use Adam Whitcroft’s Batch icon font, as per:
+ * adamwhitcroft.com/batch ?
+ */
+$batch: false!default;
+
+
+/**
+ * Base stuff
+ */
+$base-font-size:    16px!default;
+$base-line-height:  23px!default;
+$base-spacing-unit: 20px!default;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+
+/**
+ * How big would you like round corners to be by default?
+ */
+$global-round: 4px!default;
+
+
+/**
+ * Responsiveness?
+ */
+$responsive:      false!default;
+$flexible-media:  true!default;
+
+
+/**
+ * Responsive push and pull produce a LOT of code, only turn them on if you
+ * definitely need them.
+ */
+$responsive-push: false!default;
+$responsive-pull: false!default;
+
+
+/**
+ * Breakpoints
+ */
+$lap-start:   550px!default;
+$desk-start:  1024px!default;
+$palm-end:    $lap-start - 1px;
+$lap-end:     $desk-start - 1px;
+
+
+/**
+ * Neat Grid Settings
+ */
+//$column: 140px;
+//$grid-columns: 6;
+//$gutter: 5px;
+//$max-width: 935px;
+
+
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+$size-giga:     81px;
+$size-mega:     54px;
+$size-kilo:     41px;
+
+$size-alpha:    62px; // h1-size
+$size-beta:     36px; // h2-size
+$size-gamma:    27px; // h3-size
+$size-delta:    24px; // h4-size
+$size-epsilon:  18px; // h5-site
+$size-zeta:     $base-font-size; // h6-size
+
+$size-milli:    14px;
+$size-micro:    12px;
+
+
+/**
+ * English quote marks?
+ */
+$english-quotes:  true!default;
+
+/**
+ * If you want English quotes then please do not edit these; they’re only here
+ * because Sass needs them.
+ */
+$open-quote:  null;
+$close-quote: null;
+
+
+/**
+ * If you need non-English quotes, please alter the following values accordingly:
+ */
+@if $english-quotes != true {
+  $open-quote:  «;
+  $close-quote: »;
+}
+
+
+/**
+ * Typography
+ */
+$font-primary:    'Source Sans Pro', sans-serif;
+$font-secondary:  'Klavika', sans-serif;
+
+
+/**
+ * Color Variables
+ */
+$shade-1: #f2f2f2;
+$shade-2: #e6e6e6;
+$shade-3: #b3b3b3;
+$shade-4: #999999;
+
+
+/**
+ * Color Variables
+ */
+$color-primary:         #1b0055;
+$color-primary-tinted:  #0047d4;
+$color-secondary:       #32a3f9;
+$color-tertiary:        #cc292d;
+$color-tertiary-tinted: #ea4a3a;
+$color-background:      #fff;
+$color-text:            #000;
+$color-text-required:   #b1b3b6;
+$color-text-quotes:     #666666;
+$color-text-secondary:  #808080;
+$color-bg-header:       $color-primary;
+$color-border:          #e6e6e6;
+$color-link-regular:    $color-tertiary;
+$color-link-active:     $color-tertiary-tinted;
+$color-button-regular:  $color-primary;
+$color-button-active:   $color-primary-tinted;
+

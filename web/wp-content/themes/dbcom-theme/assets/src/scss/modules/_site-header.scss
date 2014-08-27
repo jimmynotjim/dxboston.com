@@ -1,0 +1,122 @@
+/*------------------------------------*\
+    $SITE HEADER
+\*------------------------------------*/
+.site-header {
+  padding: 0 30px;
+}
+
+.main-nav {
+  background-color: $color-primary;
+  color: #fff;
+  font-family: $font-secondary;
+  font-size: em($size-epsilon, $base-font-size);
+  text-align: center;
+  text-transform: uppercase;
+
+  .is-active > a {
+    background-color: $color-tertiary;
+    color: #fff;
+  }
+
+  .btn--register {
+    background: $color-primary-tinted;
+    font-size: em($size-epsilon, $size-epsilon);
+    padding: 18px 0;
+
+    @include media($desk-start) {
+      font-size: em($size-gamma, $size-epsilon);
+      padding: 22px 0;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $color-tertiary;
+    }
+  }
+
+  a {
+    color: #fff;
+    padding: 10px 0;
+
+    @include media($desk-start) {
+      padding: 27px 25px;
+    }
+
+    &:hover {
+      background-color: $color-tertiary;
+      color: #fff;
+    }
+
+    &.icon {
+      padding: 0;
+    }
+  }
+}
+
+.primary-menu {
+  .menu-item:hover > a {
+    background-color: $color-tertiary;
+    color: #fff;
+  }
+
+  .sub-menu {
+    background-color: $color-tertiary-tinted;
+    text-align: left;
+
+    li {
+      border-bottom: 1px solid tint($color-tertiary-tinted, 15%);
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+   @include media(max-width $lap-end) {
+    background-color: $color-tertiary-tinted;
+    text-align: left;
+
+    li {
+      border-bottom: 1px solid tint($color-tertiary-tinted, 15%);
+
+      &:last-child {
+        border: none;
+      }
+    }
+
+    a {
+      padding: 10px 15px;
+    }
+  }
+}
+
+.search-icon {
+  background: url('../img/search-icon.png') no-repeat 50% 50%;
+  background-size: 24px;
+}
+
+.site-logo {
+  @include hide-text;
+
+  background: url('../img/dxb-logo-blue.png') no-repeat;
+}
+
+.nav-toggle {
+  border: 1px solid $color-secondary;
+}
+
+.section-heading {
+  color: #fff;
+  font-family: $font-secondary;
+  font-size: em($size-beta, $base-font-size);
+  font-weight: 600;
+  line-height: 1;
+
+  @include media($lap-start) {
+    font-size: em($size-mega, $base-font-size);
+  }
+
+  @include media($desk-start) {
+    font-size: em($size-giga, $base-font-size);
+  }
+}

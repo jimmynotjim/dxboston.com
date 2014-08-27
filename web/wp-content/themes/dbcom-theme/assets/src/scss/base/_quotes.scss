@@ -1,0 +1,130 @@
+/*------------------------------------*\
+    $QUOTES
+\*------------------------------------*/
+/**
+ * If English quotes are set in `_vars.scss`, define them here.
+ */
+@if $english-quotes == true {
+  $open-quote: “ !global;
+  $close-quote: ” !global;
+}
+
+
+/**
+ * Big up @boblet: html5doctor.com/blockquote-q-cite
+ */
+
+/**
+ * Inline quotes.
+ */
+q {
+  quotes: "‘" "’" "#{$open-quote}" "#{$close-quote}";
+
+  &:before {
+    content: "‘";
+    content: open-quote;
+  }
+
+  &:after {
+    content: "’";
+    content: close-quote;
+  }
+
+  q:before {
+    content: "“";
+    content: open-quote;
+  }
+
+  q:after {
+    content: "”";
+    content: close-quote;
+  }
+}
+
+blockquote {
+  border-bottom: 5px solid $color-border;
+  color: $color-text-quotes;
+  font-size: em($size-delta, $base-font-size);
+  font-style: italic;
+  font-weight: 200;
+  line-height: 28px / $size-delta;
+  padding-bottom: $base-spacing-unit;
+  position: relative;
+  quotes: "#{$open-quote}" "#{$close-quote}";
+  /**
+   * .4em is roughly equal to the width of the opening “ that we wish to hang.
+   */
+
+  &:before {
+    color: $color-border;
+    content: "#{$open-quote}";
+    content: open-quote;
+    font-family: $font-secondary;
+    font-size: em(72px, $size-delta);
+    font-style: normal;
+    line-height: 1;
+    position: absolute;
+    left: -40px;
+    top: -2px;
+  }
+
+  p:before {
+    content: "";
+    content: no-open-quote;
+  }
+
+  p:after {
+    content: "";
+    content: no-close-quote;
+  }
+
+  p:last-of-type {
+    margin-bottom:0;
+
+    &:after {
+      content: "#{$close-quote}";
+      content: close-quote;
+    }
+  }
+
+  q:before {
+    content: "‘";
+    content: open-quote;
+  }
+
+  q:after {
+    content: "’";
+    content: close-quote;
+  }
+
+  footer {
+    font-weight: 700;
+  }
+
+  @include media($desk-start) {
+    font-size: em($size-beta, $base-font-size);
+    line-height: 40px / $size-beta;
+
+    &:before {
+      font-size: em(100px, $size-beta);
+      left: -54px;
+    }
+  }
+}
+
+.source {
+  font-size: em($size-milli, $size-delta);
+  font-style: normal;
+  font-weight: 500;
+  margin-top: $base-spacing-unit;
+  text-indent: 0;
+  text-transform: uppercase;
+
+  @include media($desk-start) {
+    font-size: em($size-milli, $size-beta);
+  }
+
+  &:before {
+    content: "— ";
+  }
+}

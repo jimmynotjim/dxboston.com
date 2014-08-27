@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    $SITE FOOTER
+\*------------------------------------*/
+.site-footer {
+  clear: both;
+
+  margin: 0 25px;
+
+  @include media($desk-start) {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .register {
+    margin-bottom: $base-spacing-unit;
+
+    @include media($desk-start) {
+      @include span-columns(3);
+    }
+  }
+
+  .menu {
+    margin-bottom: $base-spacing-unit;
+
+    @include media($desk-start) {
+      @include span-columns(7);
+    }
+
+    > li {
+      margin-bottom: $base-spacing-unit;
+
+      @include media(max-width $palm-end) {
+        @include span-columns(6);
+
+        &:nth-child(even) {
+          @include omega;
+        }
+
+        &:nth-child(odd) {
+          clear: both;
+        }
+      }
+
+      @include media($lap-start) {
+        @include span-columns(1 of 3);
+
+        &:nth-child(3n) {
+          @include omega;
+        }
+
+        &:nth-child(3n+1) {
+          clear: both;
+        }
+      }
+    }
+  }
+
+  .sub-menu {
+    height: auto;
+    position: initial;
+  }
+
+  .footer-buttons {
+    margin-bottom: $base-spacing-unit;
+
+    @include media($desk-start) {
+      @include span-columns(2);
+    }
+  }
+
+  .btn--social {
+    height: 30px;
+    margin-bottom: $base-spacing-unit;
+    width: 30px;
+  }
+
+  .presented-by {
+
+    span {
+      display: block;
+      margin-bottom: $half-spacing-unit;
+    }
+  }
+}

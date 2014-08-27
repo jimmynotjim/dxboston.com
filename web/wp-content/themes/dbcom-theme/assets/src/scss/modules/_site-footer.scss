@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    $SITE FOOTER
+\*------------------------------------*/
+.site-footer {
+  border-top: 1px solid $color-secondary;
+  line-height: 1;
+  padding-top: $base-spacing-unit * 2;
+
+  .sub-menu {
+
+    a {
+      color: $color-secondary;
+      font-size: 20px;
+      font-style: italic;
+
+      &:hover {
+        color: $color-tertiary;
+      }
+    }
+  }
+
+  .parent-item {
+    > a {
+      color: $color-text-secondary;
+      font-family: $font-secondary;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  .btn--social {
+    background-size: auto 30px;
+
+    &.btn--facebook {
+      background-position: -62px 1px;
+    }
+
+    &.btn--twitter {
+      background-position: -30px 1px;
+    }
+
+    &.btn--instagram {
+      background-position: -150px 1px;
+    }
+  }
+
+  .presented-by {
+    color: $color-text-secondary;
+    font-size: 13px;
+    font-style: italic;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
+}
